@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
+    <!-- Bootstrap stylesheets and script -->
+    <link th:href="@{/css/bootstrap.css}" th:rel="stylesheet"/>
+    <link th:href="@{/css/techjobs.css}" th:rel="stylesheet"/>
+
 </head>
 <body>
 
@@ -11,7 +15,7 @@
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
-
+    <table th:replace="fragments :: displayTable"></table>
 </div>
 
 </body>
